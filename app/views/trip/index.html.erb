@@ -15,12 +15,12 @@
 		<div class="fixed">
 			<div class="date">
 				<label>Departure</label>
-				<input type="text" value="<%= @default_date %>" >
+				<input type="text" value="<%=l @departure_date, :format => :long%>" >
 			</div>
 
 			<div class="date">
 				<label>Return</label>
-				<input type="text" value="<%= @default_date %>" >
+				<input type="text" value="<%=l @return_date, :format => :long %>" >
 			</div>
 
 			<div  id="people">

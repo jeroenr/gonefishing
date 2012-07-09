@@ -6,6 +6,9 @@ class TripController < ApplicationController
 
     @countries = []
     @popular_countries = []
+    
+    @departure_date = params[:departure] || Date.today + 10.days
+    @return_date = params[:return] || @departure_date + 7.days
 
 		#response = RestClient.get     "http://trip.elmar.nl/api/v2/accommodations?duration=8&departureDate=2012-07-14&occupancy=2&countryCode=ES&daysAfterDepartureDate=2&daysBeforeDuration=2&daysAfterDuration=2&numResultsPerPage=9&pageNumber=#{page}"
 

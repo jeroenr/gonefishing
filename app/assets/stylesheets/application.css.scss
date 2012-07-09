@@ -46,6 +46,12 @@ header{
 }
 
 form#searchbox{
+    .sticky #main {
+        position:fixed;
+        top:0;
+        left:0;
+        width:100%;
+    }
 	div#main{
 		border-bottom:1px solid $gray;
 		margin-bottom:$bottom-separation;
@@ -228,5 +234,59 @@ footer{
 	font-style:italic;
 	color:$dark-gray;
 	padding:10px;
-	text-align:center;	
+	text-align:center;
+
+    .top {
+        position:fixed;
+        right:15px;
+        bottom:15px;
+        width:50px;
+        height:25px;
+        padding-top:25px;
+        line-height:25px;
+        background:#333;
+        color:#888;
+        display:block;
+        text-transform:uppercase;
+        text-decoration:none;
+        text-align:center;
+        font-size:14px;
+        -webkit-border-radius:10px;
+        -moz-border-radius:10px;
+        border-radius:10px;
+        behavior:url(../PIE.htc);
+    }
+
+    .top:before {
+        position:absolute;
+        top:11px;
+        left:14px;
+        content:"";
+        border-bottom:11px solid #888;
+        border-left:11px solid transparent;
+        border-right:11px solid transparent;
+    }
+
+    .top:hover {
+        color:#eee;
+    }
+
+    .top:hover:before {
+        border-bottom-color:#eee;
+    }
+
+    .opacity .top {
+        opacity:1;
+        -webkit-transition:opacity 700ms linear;
+        -moz-transition:opacity 700ms linear;
+        transition:opacity 700ms linear;
+    }
+
+    .opacity .top.hidden {
+        opacity:0;
+    }
+
+    .no-opacity .top.hidden {
+        display:none;
+    }
 }

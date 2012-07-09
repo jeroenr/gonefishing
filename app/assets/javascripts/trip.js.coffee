@@ -13,9 +13,16 @@ $ ->
     loading.detach()
     footer.waypoint(opts)
 
-  waypointCallback = (event, direction) ->
+  infiniteScrollCallback = (event, direction) ->
     footer.waypoint('remove')
     $('body').append(loading)
     $.get('/trip.js?page=' + footer.attr('nextpage'), ajaxCallback)
 
-  footer.waypoint(waypointCallback, opts)
+  footer.waypoint(infiniteScrollCallback, opts)
+
+  $('.top').addClass('hidden')
+
+  backToTopCallback = (event, direction) ->
+    $('.top').toggleClass('hidden', direction is "up")
+  
+  $('.container').waypoint(backToTopCallback, { offset: '-100%'})

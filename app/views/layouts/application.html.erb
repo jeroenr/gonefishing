@@ -1,14 +1,29 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Gonefishing</title>
+  <title>Gone Fishing</title>
   <%= stylesheet_link_tag    "application", :media => "all" %>
   <%= javascript_include_tag "application" %>
   <%= csrf_meta_tags %>
 </head>
 <body>
 
-<%= yield %>
+		<div class="container">
 
-</body>
+			<header>
+				<a class="logo" href="/">Gone Fishing</a>
+				<blockquote>Get away from the rigors of daily life!</blockquote>
+			</header>
+
+			<%= yield %>
+
+			<footer>
+				<p>&copy; Gonefishing.com 2012</p>
+			</footer>
+
+		</div>
+
+
+	</body>
+
 </html>

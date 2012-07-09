@@ -1,3 +1,185 @@
-// Place all the styles related to the Trip controller here.
+// Place all the styles related to the home controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+@import "variables";
+
+#results {
+	.image {
+		height:170px;
+		width:100%;
+		background-position: 50% 50%;
+		background-repeat:no-repeat;
+		background-color:black;
+		display:block;
+	}
+	&.compact a{
+		color:$black;
+		height: 235px;
+		display:block;
+		position:relative;
+		margin-bottom: $bottom-separation;
+		@include border-radius(3px);
+		&:hover{
+			text-decoration:none;
+			color:$red;
+			.image{	opacity:1;	}
+			.offer{	background:$red; }
+			.location{color:$red;}
+		}
+		.title, .image, .offer{@include color-transition;}
+		.title {
+			font-size: 18px;
+			padding:10px 0 10px 0;
+			width:100%;
+			white-space: nowrap;
+		    overflow: hidden;
+		    text-overflow: ellipsis;
+		    display:block;
+		}
+		.image {
+			top:40px;
+			position:absolute;
+			opacity:0.7;
+		}
+		.image-background{
+			height:170px;
+			top:40px;
+			width:100%;
+			position:absolute;
+			background-color:black;
+			display:block;
+		}
+		.offer{
+			position:absolute;
+			top:75px;
+			right: 0px;
+			width:70px;
+			padding:2px 7px;
+			background:$black;
+			color:white;
+			text-align:center;
+			span{display:block;}
+			.days{font-size:14px;line-height:16px;font-style:italic;}
+			.price{
+				font-family: compactFont;
+				padding-top:5px;
+				font-size:36px;
+				line-height:32px;
+				span{font-size:20px;display:inline;}
+			}
+			.date{font-size:13px;line-height:13px;font-style:italic;margin-bottom:5px}
+		}
+
+		.location{
+			color: $dark-gray;
+			bottom:0px;
+			width:100%;
+			white-space: nowrap;
+		    overflow: hidden;
+		    text-overflow: ellipsis;
+			display:block;
+			margin: 5px 0;
+			font-size:13px;
+			font-style:italic;
+			text-align:right;
+			position:absolute;
+		}
+	}
+	
+
+	&.list{
+		.row{
+			height:170px;
+			border-top:1px solid $gray;
+			padding-top:$bottom-separation;
+			margin-bottom:$bottom-separation;
+			h2,h3{font-weight:normal;}
+			h2{
+				font-size:24px;
+				line-height:115%;
+				width:100%;
+				white-space: nowrap;
+			    overflow: hidden;
+			    text-overflow: ellipsis;
+			    a{
+			    	color:$black;
+			    	&:hover{color:$red;}
+			    }
+			}
+			h3{
+				font-size:16px;
+				line-height:140%;
+				margin-bottom:15px;
+				font-style:italic;
+				span{
+					color:transparent;
+					font-size:0;
+					display:inline-block;
+					background: url(/assets/blackstar.png) repeat-x;
+					width:0px;
+					height:12px;
+					vertical-align:middle;
+					&.stars-1{width:12px;}
+					&.stars-2{width:24px;}
+					&.stars-3{width:36px;}
+					&.stars-4{width:48px;}
+					&.stars-5{width:60px;}
+				}
+			}
+
+			div.detail{
+				p{color:$dark-gray;}
+			}
+
+			div.price{
+				height:170px;
+				text-align:center;
+				position:relative;
+				p{
+					line-height:100%;
+					margin:0;
+					font-style:italic;
+					&.days{
+						font-size:20px;
+						margin-top:5px; 
+					}
+					&.cheapest{
+						font-family:compactFont;
+						font-style:normal;
+						font-size:64px;
+						margin-top:7px;
+						span{font-size:36px;line-height:36px;}
+					}
+					&.dayprice{
+						font-size:14px;
+						margin-top:-8px;
+					}
+					&.departure{
+						font-size:15px;
+						margin-top:10px;
+					}
+				}
+				a{
+					position:absolute;
+					bottom:0;
+					@include border-radius(5px);
+					background:$black;
+					color:white;
+					text-align:center;
+					font-size:18px;
+					font-style:normal;
+					line-height:36px;
+					width:100%;
+					display:block;
+					&:hover,&:active{
+						text-decoration:none;
+						background:$red;
+					}
+				}
+			}
+		}
+		
+		
+	}
+}

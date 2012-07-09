@@ -1,0 +1,34 @@
+
+
+/*    Colors      */
+
+$black: #222;
+$red: #d40000;
+$dark-gray:#4d4d4d;
+$gray: #b3b3b3;
+$light-gray: #f9f9f9;
+
+/*===========================*/
+
+$bottom-separation: 40px;
+@mixin border-radius($radius){
+	-webkit-border-radius: $radius;
+	-moz-border-radius: $radius;
+	border-radius: $radius;
+}
+
+@mixin button-shadow{
+	-moz-box-shadow:    inset 0 0 15px rgba(0,0,0,0.3);
+	-webkit-box-shadow: inset 0 0 15px rgba(0,0,0,0.3);
+	box-shadow:         inset 0 0 15px rgba(0,0,0,0.3);
+}
+
+$input-padding:12px 10px;
+
+
+@mixin color-transition{
+	-webkit-transition:all 0.2s ease-in;  
+	-moz-transition:all 0.2s ease-in;  
+	-o-transition:all 0.2s ease-in;  
+	transition:all 0.2s ease-in;  
+}

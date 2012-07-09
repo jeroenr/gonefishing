@@ -1,0 +1,146 @@
+@import "twitter/bootstrap/bootstrap";
+
+@import "twitter/bootstrap/responsive";
+
+// Set the correct sprite paths
+@iconSpritePath: asset-path('twitter/bootstrap/glyphicons-halflings.png');
+@iconWhiteSpritePath: asset-path('twitter/bootstrap/glyphicons-halflings-white.png');
+
+
+/* CUSTOM STYLES */
+
+@black: #222;
+@red: #d40000;
+@dark-gray:#4d4d4d;
+@gray: #b3b3b3;
+@light-gray: #f9f9f9;
+
+@linkColor: @red;
+@btnPrimaryBackground: lighten(@linkColor,15%);
+@btnPrimaryBackgroundHighlight: @linkColor;
+@btnBackground: @white;
+@btnBackgroundHighlight: darken(@white,5%);
+
+
+/* DEFAULT STYLES OVERWRITES */
+blockquote {
+	padding: 0;
+	border:none;
+	font-style:italic;
+}
+
+body {
+	font-family: Georgia, Times, serif;
+	font-size: 13px;
+	line-height: 130%;
+}
+
+input, button, select, textarea {
+	font-family: Georgia, Times, serif;
+}
+
+h1{
+//	font-family: compactFont, Impact, Arial, sans;
+	color:@dark-gray;
+	display: block;
+	font-size:36px;
+	font-weight: normal;
+	font-style: italic;
+	line-height:100%;
+}
+
+.btn{
+  border: 1px solid @btnBorder;
+  border-bottom-color: darken(@btnBorder, 10%);
+}
+
+.btn {
+  .buttonBackground(@btnBackground, @btnBackgroundHighlight);
+}
+
+.btn-primary {
+  .buttonBackground(@btnPrimaryBackground, @btnPrimaryBackgroundHighlight);
+}
+
+.pagination{ 
+	margin: 0 0 40px 0;
+	overflow: hidden; 
+	font-size:16px; 
+	font-style:italic;
+	ul {
+		float:right;
+		webkit-box-shadow: none;
+		-moz-box-shadow: none;
+		box-shadow: none;
+		-webkit-box-shadow: none;
+		-moz-box-shadow: none;
+		box-shadow: none;
+		a {
+			border:none;
+			color:@black;
+		}
+		a:hover {color:@red;}
+	}
+}
+
+
+@media (max-width: 767px) { 
+	.dropdown, #landSelect {display:none;}
+	form#searchbox{
+		div#main{
+			border:none;
+			height:auto;
+			div#land,div#people,div#date, a.search{
+				margin:0;
+				float: none;
+				display: block;
+				width:auto;
+				clear:both;
+				overflow: hidden;
+				select{
+					width:100%;
+				}
+			}
+			div#people{
+				margin-bottom:10px;
+			}
+			.fixed {
+				float: none;
+			}
+		}
+	}
+	#results.list .row{height: auto !important;}
+	#sorting {
+		select{
+			margin: 5px 0 0 20px;
+			background:@light-gray;
+			color:@dark-gray;
+		}
+	}
+}
+
+@media (min-width: 768px) and (max-width: 939px){
+	#results.list .row div.price p.dayprice{font-size: 12px !important;white-space: nowrap;}
+	#results.list .row div.price p.departure{font-size: 14px !important;white-space: nowrap;}
+	#date label{display: none;}
+	form#searchbox div#main .fixed{ width: 522px !important;}
+	form#searchbox div#main div#date, form#searchbox div#main div#duration, form#searchbox div#main div#people, form#searchbox div#main div.dropdown{
+		margin-right: 10px;
+	}
+	form#searchbox div#main div#landSelect{
+		margin-right: 530px;
+		.dropdown a.dropdown-toggle span{
+			width:100px;
+			white-space: nowrap;
+		    overflow: hidden;
+		    text-overflow: ellipsis;
+		}
+	}
+}
+
+@media (min-width: 768px) {
+	#land label,select{display:none;}	
+	form#searchbox div#main .fixed{
+		width:665px;
+	}
+}

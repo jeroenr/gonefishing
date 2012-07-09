@@ -1,0 +1,71 @@
+
+<form id="searchbox" >
+
+	<div id="main" >
+
+		<div id="land">
+			<span class="landLabel">Land</span>
+			<select id="week" class="input-medium" data-bind="value: departureweek">
+				<%for country in @countries %>
+	        		<option><%= country %></option>
+				<% end -%>
+			</select>
+		</div>
+
+		<div class="fixed">
+			<div id="date">
+				<label>Departure Date</label>
+				<input type="text" value="<%= @default_date %>" >
+			</div>
+
+			<div id="duration">
+				<label>Return Date</label>
+				<input type="text" value="<%= @default_date %>" >
+			</div>
+
+			<div  id="people">
+				<label>People</label>
+				<input type="text" value="2" >
+			</div>
+
+			<a class="search">Search!</a>
+		</div>
+
+		<div id="landSelect">
+			<div class="dropdown">
+				<a class="dropdown-toggle" data-toggle="dropdown" href="#">
+					<span>All Destinations</span>
+					<b class="caret"></b>
+				</a>
+				<ul class="dropdown-menu">
+
+					<li class="nav-header"> Most Popular </li>
+					<li class="divider"></li>
+
+					<%for country in @popular_countries %>
+						<li class="popular"><a href="#"> <span class="<%= country[:code] %>"></span> <%= country[:name] %></a></li>
+					<% end -%>
+
+					<li class="nav-header"> All destinations </li>
+					<li class="divider"></li>
+
+					<%for country in @countries %>
+						<li><a href="#"><%= raw country %></a></li>
+					<% end -%>
+
+				</ul>
+			</div>
+		</div>
+
+	</div>
+
+</form>
+
+
+<div id="results" class="row compact">
+  <%= render :partial => "trip", :collection => @trips, :as => :trip %>
+</div>
+
+
+<div id="footer" nextpage="<%= @page + 1 %> "/>
+

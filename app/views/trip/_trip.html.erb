@@ -1,0 +1,13 @@
+<a href="/trips/<%= trip['id'] %>.searchresults" class="span4">
+	<span class="title" ><%=trip['name'] %></span>
+	<span class="image-background"></span>
+	<span class="image" style="background-image:url(<%= trip['profileimages']["big"] %>);"></span>
+
+	<span class="offer">
+		<span class="days"><%=trip["cheapestoffer"]["duration"] %> dagen</span>
+		<span class="price"><span>&euro;</span><%=trip["cheapestoffer"]['price'].to_i %></span>
+		<span class="date"><%=trip["cheapestoffer"]["departureDate"] %></span>
+	</span>
+
+	<span class="location"><%=trip["country"]['name'] %> - <%=trip["region"]['name'] %> </span>
+</a>

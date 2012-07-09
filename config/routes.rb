@@ -12,6 +12,7 @@ Gonefishing::Application.routes.draw do
 
   # Sample resource route (maps HTTP verbs to controller actions automatically):
   resources :trip
+  match '/' => 'trip#index'
 
   # Sample resource route with options:
   #   resources :products do

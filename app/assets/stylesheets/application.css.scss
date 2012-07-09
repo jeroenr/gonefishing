@@ -21,7 +21,7 @@
 }
 
 header{
-	width:280px;
+	width:375px;
 	margin: 20px auto $bottom-separation auto;
 	text-align:center;
 	a.logo{
@@ -40,6 +40,7 @@ header{
 	blockquote{
 		font-size:17px;
 		line-height:15px;
+        margin-top: 10px;
 		color: $dark-gray;
 	}
 }
@@ -53,7 +54,7 @@ form#searchbox{
 		width:100%;
 		.fixed{float:right;}
 		input,label,select{	font-size:15px; float:left;	color:$black;}
-		div#date,div#duration ,div#people,div#landSelect,div.dropdown{
+		div.date,div#duration ,div#people,div#landSelect,div.dropdown{
 			float:left;
 			margin: 2px 20px 2px 0;			
 			span{float:left;}
@@ -118,7 +119,7 @@ form#searchbox{
 				}
 			}
 		}
-		div#date input{width:109px; background:$light-gray url(/assets/calendar.png) 103px 15px no-repeat}
+		div.date input{width:109px; background:$light-gray url(/assets/calendar.png) 103px 15px no-repeat}
 		div#duration {
 			position:relative;
 			input{width:62px; padding:12px 5px; text-align:center;}

@@ -4,7 +4,7 @@
 	<div id="main" >
 
 		<div id="land">
-			<span class="landLabel">Land</span>
+			<span class="landLabel"></span>
 			<select id="week" class="input-medium" data-bind="value: departureweek">
 				<%for country in @countries %>
 	        		<option><%= country %></option>
@@ -13,13 +13,13 @@
 		</div>
 
 		<div class="fixed">
-			<div id="date">
-				<label>Departure Date</label>
+			<div class="date">
+				<label>Departure</label>
 				<input type="text" value="<%= @default_date %>" >
 			</div>
 
-			<div id="duration">
-				<label>Return Date</label>
+			<div class="date">
+				<label>Return</label>
 				<input type="text" value="<%= @default_date %>" >
 			</div>
 
@@ -27,8 +27,6 @@
 				<label>People</label>
 				<input type="text" value="2" >
 			</div>
-
-			<a class="search">Search!</a>
 		</div>
 
 		<div id="landSelect">

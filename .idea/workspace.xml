@@ -3,7 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="672e8fbd-af3c-48b3-b050-09d48dca0ab2" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/javascripts/trip.js.coffee" afterPath="$PROJECT_DIR$/app/assets/javascripts/trip.js.coffee" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/stylesheets/application.css.scss" afterPath="$PROJECT_DIR$/app/assets/stylesheets/application.css.scss" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/layouts/application.html.erb" afterPath="$PROJECT_DIR$/app/views/layouts/application.html.erb" />
     </list>
@@ -76,25 +75,25 @@
       <file leaf-file-name="application.css.scss" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/assets/stylesheets/application.css.scss">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="286" column="5" selection-start="6079" selection-end="6079" vertical-scroll-proportion="0.0">
+            <state line="262" column="14" selection-start="5477" selection-end="5477" vertical-scroll-proportion="-9.807693">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="trip.js.coffee" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="trip.js.coffee" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/assets/javascripts/trip.js.coffee">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="22" column="30" selection-start="706" selection-end="706" vertical-scroll-proportion="0.7052402">
+            <state line="14" column="0" selection-start="448" selection-end="448" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="application.html.erb" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="application.html.erb" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/views/layouts/application.html.erb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="10" column="29" selection-start="223" selection-end="232" vertical-scroll-proportion="-3.0833333">
+            <state line="23" column="72" selection-start="564" selection-end="564" vertical-scroll-proportion="0.61981565">
               <folding />
             </state>
           </provider>
@@ -182,9 +181,9 @@
         <option value="$PROJECT_DIR$/app/views/trip/index.html.erb" />
         <option value="$PROJECT_DIR$/app/assets/stylesheets/_variables.css.scss" />
         <option value="$PROJECT_DIR$/app/controllers/trip_controller.rb" />
-        <option value="$PROJECT_DIR$/app/views/layouts/application.html.erb" />
-        <option value="$PROJECT_DIR$/app/assets/stylesheets/application.css.scss" />
         <option value="$PROJECT_DIR$/app/assets/javascripts/trip.js.coffee" />
+        <option value="$PROJECT_DIR$/app/assets/stylesheets/application.css.scss" />
+        <option value="$PROJECT_DIR$/app/views/layouts/application.html.erb" />
       </list>
     </option>
   </component>
@@ -925,9 +924,9 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="22" width="1440" height="874" extended-state="6" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
-      <window_info id="Changes" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32936507" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32936507" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Phing Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32936507" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -973,7 +972,7 @@
     <option name="CHECK_COMMIT_MESSAGE_SPELLING" value="true" />
     <option name="DEFAULT_PATCH_EXTENSION" value="patch" />
     <option name="FORCE_NON_EMPTY_COMMENT" value="false" />
-    <option name="LAST_COMMIT_MESSAGE" value="Removed commented out code" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added scroll to top" />
     <option name="MAKE_NEW_CHANGELIST_ACTIVE" value="true" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_FILES_UP_TO_DATE_BEFORE_COMMIT" value="false" />
@@ -990,6 +989,7 @@
     <MESSAGE value="Styling" />
     <MESSAGE value="Added i18n, date format" />
     <MESSAGE value="Removed commented out code" />
+    <MESSAGE value="Added scroll to top" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -1086,23 +1086,23 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/layouts/application.html.erb">
+    <entry file="file://$PROJECT_DIR$/app/assets/javascripts/trip.js.coffee">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="10" column="29" selection-start="223" selection-end="232" vertical-scroll-proportion="-3.0833333">
+        <state line="14" column="0" selection-start="448" selection-end="448" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/assets/stylesheets/application.css.scss">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="286" column="5" selection-start="6079" selection-end="6079" vertical-scroll-proportion="0.0">
+        <state line="262" column="14" selection-start="5477" selection-end="5477" vertical-scroll-proportion="-9.807693">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/assets/javascripts/trip.js.coffee">
+    <entry file="file://$PROJECT_DIR$/app/views/layouts/application.html.erb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="22" column="30" selection-start="706" selection-end="706" vertical-scroll-proportion="0.7052402">
+        <state line="23" column="72" selection-start="564" selection-end="564" vertical-scroll-proportion="0.61981565">
           <folding />
         </state>
       </provider>

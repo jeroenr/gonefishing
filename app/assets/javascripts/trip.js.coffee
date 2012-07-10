@@ -24,5 +24,13 @@ $ ->
 
   backToTopCallback = (event, direction) ->
     $('.top').toggleClass('hidden', direction is "up")
+
+  container = $('.container')
   
-  $('.container').waypoint(backToTopCallback, { offset: '-100%'})
+  container.waypoint(backToTopCallback, { offset: '-100%'})
+
+  stickyMenuCallback = (event, direction) ->
+    container.toggleClass('sticky', direction is "down")
+    event.stopPropagation()
+
+  $('#main').waypoint(stickyMenuCallback)

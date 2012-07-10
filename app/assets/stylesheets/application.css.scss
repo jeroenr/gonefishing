@@ -45,15 +45,22 @@ header{
 	}
 }
 
-
-
-form#searchbox{
-    .sticky #main {
+.sticky {
+    #main {
+        z-index: 10000;
         position:fixed;
         top:0;
         left:0;
         width:100%;
+        div {
+            margin:0 auto;
+        }
     }
+}
+
+form#searchbox{
+
+    
 	div#main{
 		border-bottom:1px solid $gray;
 		margin-bottom:$bottom-separation;

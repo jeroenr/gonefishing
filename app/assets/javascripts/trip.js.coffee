@@ -21,7 +21,7 @@ init_infinite_scroll = () ->
   footer.waypoint((event, direction) ->
     footer.waypoint('remove')
     $('body').append(loading)
-    $.get('/trip.js?page=' + footer.attr('nextpage'), (data) ->
+    $.get('/trip.js?page=' + footer.attr('nextpage') + to_param_string(['occupancy','departure','return']), (data) ->
       loading.detach()
       footer.waypoint(opts)
     )
@@ -39,3 +39,5 @@ init_onchange_submit = (form, field, callback) ->
     $('#searchbox').submit()
   )
 
+to_param_string = (params) ->
+ ("&" + value + "=" + $('#'+value).val() for value in params ).join('')

@@ -1,7 +1,7 @@
 class TripController < ApplicationController
   before_filter do
     @countries = ["Aruba", "Cuba", "Turkije"]
-    @popular_countries = [{code: "ES", name:"Spanje"},{code: "GR", name:"Griekenland"}]
+    @popular_countries = [{ :code => "ES", :name => "Spanje"},{ :code => "GR", :name => "Griekenland"}]
 
     @departure_date = to_date(params[:departure]) || Date.today + 10.days
     @return_date = to_date(params[:return]) || @departure_date + 7.days

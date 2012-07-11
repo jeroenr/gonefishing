@@ -14,12 +14,12 @@
 		<div class="fixed">
 			<div class="date">
 				<label>Departure</label>
-				<input type="text" value="<%=l @departure_date, :format => :long%>" >
+				<%= text_field_tag :departure, l(@departure_date, :format => :long), :id => 'departure'%>
 			</div>
 
 			<div class="date">
 				<label>Return</label>
-                <%= text_field_tag :return, l(@return_date, :format => :long) %>
+                <%= text_field_tag :return, l(@return_date, :format => :long), :id => 'return' %>
 			</div>
 
 			<div  id="people">

@@ -6,9 +6,9 @@ $ ->
   init_infinite_scroll()
   init_back_to_top()
 
-  init_onchange_submit($('#searchbox'),$('#occupancy'), () ->
-    alert("bla")
-  )
+  init_onchange_submit($('#searchbox'),$('#occupancy'))
+  init_onchange_submit($('#searchbox'),$('#departure'))
+  init_onchange_submit($('#searchbox'),$('#return'))
 
 
 init_infinite_scroll = () ->

@@ -1,6 +1,4 @@
 class TripController < ApplicationController
-  respond_to :html, :json
-
   before_filter do
     @countries = ["Aruba", "Cuba", "Turkije"]
     @popular_countries = [{code: "ES", name:"Spanje"},{code: "GR", name:"Griekenland"}]

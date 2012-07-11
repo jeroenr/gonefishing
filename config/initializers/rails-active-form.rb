@@ -1,0 +1,1 @@
+require 'rails-active-form/lib/active_form'

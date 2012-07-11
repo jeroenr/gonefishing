@@ -13,18 +13,36 @@ class TripController < ApplicationController
 
 	def index
     @page = 1
+    search = Search.new(@occupancy, @departure_date, @return_date, @page, 9)
+    if search.valid?
+      puts "valid"
+    else
+      puts "invalid"
+    end
     json = perform_search(@occupancy, @departure_date, @duration, @page)
     @trips = json['accommodations']
   end
 
   def fetch_more_results
     @page = params[:page] || 1
+    search = Search.new(@occupancy, @departure_date, @return_date, @page, 9)
+    if search.valid?
+      puts "valid"
+    else
+      puts "invalid"
+    end
     json = perform_search(@occupancy, @departure_date, @duration, @page)
     @trips = json['accommodations']
   end
 
   def search
-    json = perform_search(@occupancy, @departure_date, @duration, @page)
+    search = Search.new(@occupancy, @departure_date, @return_date, 1, 9)
+    if search.valid?
+      puts "valid"
+    else
+      puts "invalid"
+    end
+    json = perform_search(@occupancy, @departure_date, @duration, 1)
     @trips = json['accommodations']
   end
 

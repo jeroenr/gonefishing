@@ -1,2 +1,2 @@
-$('#results').append("<%= escape_javascript(render :partial => 'trip', :collection => @trips, :as => :trip)%>")
+$('#results').append("<%= j render :partial => 'trip', :collection => @trips, :as => :trip %>")
 $('#footer').attr('nextpage', "<%= @page.to_i + 1 %>")

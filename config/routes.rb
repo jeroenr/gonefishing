@@ -11,7 +11,8 @@ Gonefishing::Application.routes.draw do
   # This route can be invoked with purchase_url(:id => product.id)
 
   # Sample resource route (maps HTTP verbs to controller actions automatically):
-  match 'trip' => 'trip#index'
+  match 'trip' => 'trip#index', :via => :get
+  match 'trip' => 'trip#search', :via => :post
   root :to => 'trip#index'
 
   # Sample resource route with options:

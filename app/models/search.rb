@@ -2,6 +2,7 @@ class Search < ActiveForm
   attr_accessor :occupancy, :departure, :return
 
   validates :occupancy, :departure, :return, :presence => true
+  validates :occupancy, :numericality => { :only_integer => true }
   
   validates_each :departure, :return do |record, attr, value|
     record.errors.add attr, 'is before today' if value < Date.today

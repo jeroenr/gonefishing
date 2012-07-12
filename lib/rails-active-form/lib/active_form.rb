@@ -1,4 +1,5 @@
 # Note ".valid?" method  must occur on object for validates_associated
+require 'active_record'
 class ActiveForm
   def initialize(attributes = nil)
     self.attributes = attributes

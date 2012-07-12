@@ -1,5 +1,4 @@
 <%= form_tag '/trip', :remote => true, :id => 'searchbox' do -%>
-
 	<div id="main" >
 
 		<div id="land">
@@ -14,17 +13,17 @@
 		<div class="fixed">
 			<div class="date">
 				<label>Departure</label>
-				<%= text_field_tag :departure, l(@departure_date, :format => :long), :id => 'departure'%>
+                <%= text_field :search, :departure, :id => 'departure', :value => l(@departure_date, :format => :long)%>
 			</div>
 
 			<div class="date">
 				<label>Return</label>
-                <%= text_field_tag :return, l(@return_date, :format => :long), :id => 'return' %>
+                <%= text_field :search, :return, :id => 'return', :value => l(@return_date, :format => :long) %>
 			</div>
 
 			<div  id="people">
 				<label>People</label>
-                <%= text_field_tag :occupancy, @occupancy, :id => 'occupancy' %>
+                <%= text_field :search, :occupancy, :id => 'occupancy', :value => @occupancy %>
 			</div>
 		</div>
 

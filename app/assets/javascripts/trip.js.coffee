@@ -21,7 +21,7 @@ init_infinite_scroll = () ->
   footer.waypoint((event, direction) ->
     footer.waypoint('remove')
     $('body').append(loading)
-    $.get('/trip.js?page=' + footer.attr('nextpage') + to_param_string(['occupancy','departure','return']), (data) ->
+    $.get('/trip.js?page=' + footer.attr('nextpage').trim() + to_param_string(['occupancy','departure','return']), (data) ->
       loading.detach()
       footer.waypoint(opts)
     )

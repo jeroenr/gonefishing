@@ -24,7 +24,7 @@ class TripController < ApplicationController
   end
 
   def search
-    json = perform_search(@occupancy, @departure_date, @duration, @page)
+    json = perform_search(@occupancy, @departure_date, @duration, 1)
     @trips = json['accommodations']
   end
 
@@ -35,7 +35,7 @@ class TripController < ApplicationController
   end
 
   def to_duration(departure_date, return_date)
-    departure_date.mjd - return_date.mjd + 1
+    return_date.mjd - departure_date.mjd + 1
   end
 
   def to_date(date_string, format = t(:long, :scope => [:date, :formats]))

@@ -16,4 +16,6 @@ rerun.txt
 pickle-email-*.html
 .idea
 .idea/*
-
+*.iml
+*.ipr
+**workspace.xml
